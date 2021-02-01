@@ -1,5 +1,5 @@
 <template>
-  <div class="slider w-1/2">
+  <div class="slider w-full sm:w-1/2">
     <transition-group tag="div" name="fade" class="slides-group">
       <div
         :key="current"
