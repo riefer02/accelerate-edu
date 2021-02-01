@@ -88,7 +88,7 @@
         >
           <fa icon="arrow-circle-left" class="mr-2" />Prev Page
         </button>
-        <router-link to="/ela"
+        <router-link to="/ela" @click="scrollToTop()"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
             :class="{ disabled: !showAnswer }"
@@ -115,6 +115,9 @@ export default {
   methods: {
     toggleAnswer() {
       this.showAnswer = true;
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   },
 };

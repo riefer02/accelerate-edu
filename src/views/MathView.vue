@@ -22,8 +22,8 @@
     <div class="w-full p-2 mb-4">
       <h1 class="text-5xl lg:text-6xl">Line Segments and Angles</h1>
       <h3 class="text-2xl mt-2">
-        What are the proper tools needed to create and measure line segments and
-        angles?
+        What are the <span class="mark">proper tools</span> needed to create and
+        measure line segments and angles?
       </h3>
     </div>
     <div class="flex w-full justify-center p-4">
@@ -193,14 +193,14 @@
     </div>
     <div class="w-full flex justify-center mb-4 mt-8">
       <div class="flex justify-evenly w-3/4 mx-auto">
-        <router-link to="/ela">
+        <router-link to="/ela" @click="scrollToTop()">
           <button
             class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none"
           >
             <fa icon="arrow-circle-left" class="mr-2" />Prev Page
           </button></router-link
         >
-        <router-link to="/"
+        <router-link to="/" @click="scrollToTop()"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
             :class="{ disabled: tabsClicked === 0 }"
@@ -224,6 +224,11 @@ export default {
       selectedTab: "line",
       tabsClicked: 0,
     };
+  },
+  methods: {
+    scrollToTop() {
+      window.scrollTo(0, 0);
+    },
   },
 };
 </script>

@@ -85,14 +85,14 @@
     </div>
     <div class="w-full flex justify-center mb-4 mt-8">
       <div class="flex justify-evenly w-3/4 mx-auto">
-        <router-link to="/">
+        <router-link to="/" @click="scrollToTop()">
           <button
             class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none"
           >
             <fa icon="arrow-circle-left" class="mr-2" />Prev Page
           </button>
         </router-link>
-        <router-link to="/math"
+        <router-link to="/math" @click="scrollToTop()"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
             :class="{ disabled: !showAnswer }"
@@ -115,6 +115,9 @@ export default {
   methods: {
     toggleAnswer() {
       this.showAnswer = true;
+    },
+    scrollToTop() {
+      window.scrollTo(0, 0);
     },
   },
 };
