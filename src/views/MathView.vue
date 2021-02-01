@@ -105,7 +105,7 @@
               <div class="text-xl flex flex-col p-4">
                 <img
                   class="mx-auto"
-                  src="https://media.istockphoto.com/vectors/wooden-rulers-30-centimeters-with-shadows-isolated-on-white-measuring-vector-id1136157898"
+                  src="../assets/images/image3.jpg"
                   alt="measuring rulers"
                 />
               </div>
