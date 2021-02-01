@@ -30,15 +30,18 @@
         <p class="text-2xl">
           Is every story completely different from any other? Or do some kinds
           of details appear in many stories, both in writing and on screen? An
-          archetype is a story element that shows up again and again, in very
-          old stories and in very new ones.
+          <span class="font-bold">archetype</span> is a story element that shows
+          up again and again, in very old stories and in very new ones.
         </p>
       </div>
     </div>
     <div class="bg-indigo-200 p-4 w-full lg:w-3/4 mx-auto">
       <p class="text-2xl p-2">
-        The word archetype comes from two Greek words—archein and typos. Archein
-        means “first” or “primitive,” and typos means “a model to be followed.”
+        The word <span class="italic">archetype</span> comes from two Greek
+        words—<span class="italic">archein</span> and
+        <span class="italic">typos</span>.
+        <span class="italic">Archein</span> means “first” or “primitive,” and
+        <span class="italic">typos</span> means “a model to be followed.”
         Therefore, the literal meaning of archetype is a model or “type” based
         on something primitive, such as a very old idea. And it’s
         true—archetypes go back a long way!
@@ -56,7 +59,7 @@
         />
       </video>
     </div>
-    <div class="p-4 flex justify-center w-full sm:w-1/2">
+    <div class="p-4 flex justify-center w-full lg:w-3/4 xl:w-1/2">
       <div class="flex flex-col justify-evenly items-center p-4">
         <p class="text-xl">
           <span class="text-2xl mr-2">Question:</span> How do archetypes affect
@@ -69,7 +72,7 @@
           Click Here
         </button>
         <transition name="fade">
-          <p v-show="showAnswer" class="text-xl mt-2">
+          <p v-show="showAnswer" class="text-xl mt-4">
             <span class="text-2xl">Answer:</span>
             They remind the audience of some aspect of human experience, such as
             the feelings, hopes, and dreams that all humans share.

@@ -65,13 +65,15 @@
         <div class="bg-yellow-200">
           <div v-if="selectedTab === 'line'" class="flex flex-col">
             <div class="flex flex-col xl:flex-row p-4 items-center">
-              <div class="text-xl p-4 w-full xl:w-2/3">
+              <div class="text-xl p-4 w-full">
                 <p class="my-5">
                   Recall that a line segment is a portion of a line that has
                   specific endpoints. The length between these two endpoints is
-                  called the distance. To measure something means to determine
-                  its size or amount. A ruler is the most common tool used to
-                  measure distance.
+                  called the <span class="font-bold">distance</span>. To
+                  <span class="font-bold">measure</span>
+                  something means to determine its size or amount. A
+                  <span class="font-bold">ruler</span> is the most common tool
+                  used to measure distance.
                 </p>
                 <p class="my-5">
                   The customary units of measure for length or distance in the
@@ -84,7 +86,7 @@
                   line segments in inches and centimeters using a ruler.
                 </p>
                 <p class="my-5">
-                  A ruler usually has inches, abbreviated as "" along one edge
+                  A ruler usually has inches, abbreviated as "in" along one edge
                   and centimeters, abbreviated as "cm," along the other edge.
                   Each inch on a ruler is divided into sixteenths, and each
                   centimeter on a ruler is divided into tenths.
@@ -107,7 +109,7 @@
             </div>
           </div>
           <div v-else-if="selectedTab === 'angle'" class="text-xl p-4">
-            <div class="flex flex-col sm:flex-row p-4 items-center">
+            <div class="flex flex-col lg:flex-row p-4 items-center">
               <p class="w-full lg:w-1/2">
                 Recall that an angle is a shape formed by two rays diverging
                 from a common point known as the vertex. These rays are the
@@ -122,15 +124,18 @@
                 />
               </div>
             </div>
-            <div class="bg-yellow-300 flex flex-col lg:flex-row w-full p-4">
-              <p class="w-full lg:w-1/2 flex items-center">
-                Angles are often measured in units called degrees. The degree of
-                an angle is usually a number from 0 to 360 that tells you how
-                large the angle is. It represents how much "turn" or incline the
-                angle has. Degrees are indicated by writing a number followed by
-                the symbol °. For example, when you see 45°, you read it as 45
-                degrees. To write that the measure of angle A is 45 degrees, you
-                would write m∠A = 45°.
+            <div
+              class="bg-yellow-300 flex flex-col justify-center items-center lg:flex-row w-full p-4"
+            >
+              <p class="w-full lg:w-1/2 justify-center items-center">
+                Angles are often measured in units called degrees. The
+                <span class="font-bold">degree</span> of an angle is usually a
+                number from 0 to 360 that tells you how large the angle is. It
+                represents how much "turn" or incline the angle has. Degrees are
+                indicated by writing a number followed by the symbol °. For
+                example, when you see 45°, you read it as 45 degrees. To write
+                that the measure of angle A is 45 degrees, you would write m∠A =
+                45°.
               </p>
               <div class="w-full lg:w-1/2">
                 <p class="mb-4 mt-2">Here is what a 45° angle looks like:</p>
@@ -141,10 +146,11 @@
                 />
               </div>
             </div>
-            <div class="flex flex-col p-4">
-              A protractor is a device used to measure the degree of an angle.
-              You can verify that the angle above is 45° by laying the
-              protractor on top of the angle, as shown below.
+            <div class="p-4">
+              A <span class="font-bold">protractor</span> is a device used to
+              measure the degree of an angle. You can verify that the angle
+              above is 45° by laying the protractor on top of the angle, as
+              shown below.
             </div>
             <div class="mx-auto flex justify-center">
               <img src="../assets/images/image6.jpg" alt="protractor" />
@@ -159,7 +165,7 @@
               scale and outer scale on the protractor. Looking at the inner
               scale, you will see that going counterclockwise, the degrees
               increase in increments of 10 degrees from 0 to 180 degrees. We
-              used this inner scale to determine that measured 45°.
+              used this inner scale to determine that &ang;BAC measured 45°.
             </p>
             <p class="italic my-4">
               Important Note Not all protractors have the inner scale and outer

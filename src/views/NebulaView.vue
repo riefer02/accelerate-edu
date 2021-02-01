@@ -30,7 +30,7 @@
         "
       ></div>
       <div class="bg-green-200 w-full md:w-2/3 p-2">
-        <p class="text-2xl">
+        <p class="text-2xl p-2">
           Our solar system began in a nebula about 15 billion years ago. All the
           matter in the universe was packed into an incredibly small, dense
           area. A huge explosion happened, and everything scattered in all
@@ -42,7 +42,7 @@
       </div>
     </div>
     <div class="bg-indigo-200 p-4">
-      <p class="text-2xl">
+      <p class="text-2xl p-2">
         The largest, most violent star-forming region known lies in the
         Tarantula Nebula. The bright knot of stars to the left of the center
         contains many of the largest, hottest, and brightest stars known.
