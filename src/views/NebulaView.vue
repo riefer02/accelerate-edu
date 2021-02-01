@@ -10,6 +10,7 @@
         <router-link to="/ela"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
+            :class="{ disabled: !showAnswer }"
           >
             Next Page
             <fa icon="arrow-circle-right" class="ml-1" /></button
@@ -20,15 +21,15 @@
       <h1 class="text-5xl">Nebulae</h1>
       <h3 class="text-2xl mt-2">What are nebulae?</h3>
     </div>
-    <div class="flex flex-col sm:flex-row w-full bg-yellow-200 p-4">
+    <div class="flex flex-col md:flex-row w-full bg-yellow-200 p-4">
       <div
         alt="Helix Nebula"
-        class="h-40 sm:h-auto w-full sm:w-1/3 bg-cover bg-center"
+        class="h-40 md:h-auto w-full md:w-1/3 bg-cover bg-center"
         style="
           background-image: url(https://cdn.mos.cms.futurecdn.net/iuQmVPLBRbmRQeoA46VTZ6.jpg);
         "
       ></div>
-      <div class="bg-green-200 w-full sm:w-2/3 p-2">
+      <div class="bg-green-200 w-full md:w-2/3 p-2">
         <p class="text-2xl">
           Our solar system began in a nebula about 15 billion years ago. All the
           matter in the universe was packed into an incredibly small, dense
@@ -46,15 +47,16 @@
         Tarantula Nebula. The bright knot of stars to the left of the center
         contains many of the largest, hottest, and brightest stars known.
       </p>
-      <p class="text-2xl mt-4">
-        Click through the slideshow to see a variety of known nebulae found in
-        our galaxy and beyond. 
+      <p class="text-xl mt-4 p-2">
+        <span class="text-2xl italic mr-2">Directions:</span>Click through the
+        slideshow to see a variety of known nebulae found in our galaxy and
+        beyond. 
       </p>
     </div>
-    <div class="w-full p-4 flex flex-col sm:flex-row">
+    <div class="w-full p-4 flex flex-col lg:flex-row">
       <Slider />
       <div
-        class="flex flex-col justify-center items-center p-4 mx-auto w-full sm:w-1/2"
+        class="flex flex-col justify-center items-center p-4 mx-auto w-full lg:w-1/2"
       >
         <p class="text-xl">
           <span class="text-2xl block my-4">Question:</span> What are some
@@ -84,6 +86,7 @@
         <router-link to="/ela"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
+            :class="{ disabled: !showAnswer }"
           >
             Next Page
             <fa icon="arrow-circle-right" class="ml-1" /></button
@@ -106,8 +109,10 @@ export default {
   },
   methods: {
     toggleAnswer() {
-      this.showAnswer = !this.showAnswer;
+      this.showAnswer = true;
     },
   },
 };
 </script>
+
+<style></style>

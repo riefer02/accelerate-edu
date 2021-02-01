@@ -12,6 +12,7 @@
         <router-link to="/"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
+            :class="{ disabled: tabsClicked === 0 }"
           >
             Next Page
             <fa icon="arrow-circle-right" class="ml-1" /></button
@@ -32,7 +33,10 @@
           making their blueprints are line segments and angles. These geometric
           figures are the foundation of the major shapes. It's necessary to
           measure and create line segments and angles for all sorts of reasons.
-          Study each tab to learn about the tools used in this process.
+        </p>
+        <p class="text-xl mt-4 p-2">
+          <span class="text-2xl italic mr-2">Directions:</span>Study each tab to
+          learn about the tools used in this process.
         </p>
       </div>
     </div>
@@ -41,13 +45,19 @@
         <div class="flex">
           <div
             class="bg-green-200 p-4 cursor-pointer"
-            @click="selectedTab = 'line'"
+            @click="
+              selectedTab = 'line';
+              incrementTabClick();
+            "
           >
             Line Segments and Rulers
           </div>
           <div
             class="bg-red-200 p-4 cursor-pointer"
-            @click="selectedTab = 'angle'"
+            @click="
+              selectedTab = 'angle';
+              incrementTabClick();
+            "
           >
             Angles and Protractors
           </div>
@@ -55,7 +65,7 @@
         <div class="bg-yellow-200">
           <div v-if="selectedTab === 'line'" class="flex flex-col">
             <div class="flex">
-              <div class="text-xl p-4 w-2/3">
+              <div class="text-xl p-4 w-full sm:w-2/3">
                 <p class="my-5">
                   Recall that a line segment is a portion of a line that has
                   specific endpoints. The length between these two endpoints is
@@ -97,8 +107,8 @@
             </div>
           </div>
           <div v-else-if="selectedTab === 'angle'" class="text-xl p-4">
-            <div class="flex p-4 items-center">
-              <p class="w-1/2">
+            <div class="flex flex-col sm:flex-row p-4 items-center">
+              <p class="w-full lg:w-1/2">
                 Recall that an angle is a shape formed by two rays diverging
                 from a common point known as the vertex. These rays are the
                 "sides" of an angle, known as the initial side—also called the
@@ -112,8 +122,8 @@
                 />
               </div>
             </div>
-            <div class="bg-yellow-300 flex flex-col sm:flex-row w-full p-4">
-              <p class="w-full sm:w-1/2 flex items-center">
+            <div class="bg-yellow-300 flex flex-col lg:flex-row w-full p-4">
+              <p class="w-full lg:w-1/2 flex items-center">
                 Angles are often measured in units called degrees. The degree of
                 an angle is usually a number from 0 to 360 that tells you how
                 large the angle is. It represents how much "turn" or incline the
@@ -122,8 +132,8 @@
                 degrees. To write that the measure of angle A is 45 degrees, you
                 would write m∠A = 45°.
               </p>
-              <div class="w-full sm:w-1/2">
-                <p class="mb-4">Here is what a 45° angle looks like:</p>
+              <div class="w-full lg:w-1/2">
+                <p class="mb-4 mt-2">Here is what a 45° angle looks like:</p>
                 <img
                   class="w-1/2 mx-auto"
                   src="../assets/images/image4.jpg"
@@ -163,17 +173,22 @@
         </div>
       </div>
     </div>
-    <div class="bg-yellow-200 w-full flex justify-center">
-      <div class="flex justify-between w-1/4">
+    <div class="bg-yellow-200 w-full flex justify-center mb-4">
+      <div class="flex justify-evenly w-3/4 mx-auto">
         <router-link to="/ela">
-          <button class="text-2xl mr-4 focus:outline-none">
+          <button
+            class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none"
+          >
             <fa icon="arrow-circle-left" class="mr-2" />Previous Page
           </button></router-link
         >
         <router-link to="/"
-          ><button class="text-2xl focus:outline-none">
+          ><button
+            class="text-xl sm:text-2xl flex justify-center items-center mr-2"
+            :class="{ disabled: tabsClicked === 0 }"
+          >
             Next Page
-            <fa icon="arrow-circle-right" class="" /></button
+            <fa icon="arrow-circle-right" class="ml-1" /></button
         ></router-link>
       </div>
     </div>
@@ -189,7 +204,19 @@ export default {
   data() {
     return {
       selectedTab: "line",
+      tabsClicked: 0,
     };
+  },
+  methods: {
+    incrementTabClick() {
+      this.tabsClicked++;
+    },
   },
 };
 </script>
+
+<style>
+.disabled {
+  @apply opacity-50 cursor-not-allowed;
+}
+</style>

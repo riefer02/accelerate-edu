@@ -12,6 +12,7 @@
         <router-link to="/math"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
+            :class="{ disabled: !showAnswer }"
           >
             Next Page
             <fa icon="arrow-circle-right" class="ml-1" /></button
@@ -34,7 +35,7 @@
         </p>
       </div>
     </div>
-    <div class="bg-indigo-200 p-2 w-full sm:w-3/4 mx-auto">
+    <div class="bg-indigo-200 p-4 w-full sm:w-3/4 mx-auto">
       <p class="text-2xl p-2">
         The word archetype comes from two Greek words—archein and typos. Archein
         means “first” or “primitive,” and typos means “a model to be followed.”
@@ -42,13 +43,13 @@
         on something primitive, such as a very old idea. And it’s
         true—archetypes go back a long way!
       </p>
-      <p class="text-2xl mt-4 mb-4 p-2">
-        <span class="mr-2">Directions:</span>Watch this video to learn how
-        archetypes can make a story more meaningful.
+      <p class="text-xl mt-4 mb-4 p-2">
+        <span class="text-2xl italic mr-2">Directions:</span>Watch this video to
+        learn how archetypes can make a story more meaningful.
       </p>
     </div>
     <div class="flex justify-center bg-red-400 w-full">
-      <video class="w-full sm:w-1/2" controls>
+      <video class="w-full lg:w-1/2" controls>
         <source
           src="../assets/video/ela-lesson-video-accelerate-edu.mp4"
           type="video/mp4"
@@ -76,17 +77,22 @@
         </transition>
       </div>
     </div>
-    <div class="bg-yellow-200 w-full flex justify-center">
-      <div class="flex justify-between w-1/4">
+    <div class="bg-yellow-200 w-full flex justify-center mb-4">
+      <div class="flex justify-evenly w-3/4 mx-auto">
         <router-link to="/">
-          <button class="text-2xl mr-4 focus:outline-none">
+          <button
+            class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none"
+          >
             <fa icon="arrow-circle-left" class="mr-2" />Previous Page
           </button>
         </router-link>
         <router-link to="/math"
-          ><button class="text-2xl focus:outline-none">
+          ><button
+            class="text-xl sm:text-2xl flex justify-center items-center mr-2"
+            :class="{ disabled: !showAnswer }"
+          >
             Next Page
-            <fa icon="arrow-circle-right" class="" /></button
+            <fa icon="arrow-circle-right" class="ml-1" /></button
         ></router-link>
       </div>
     </div>
@@ -102,10 +108,14 @@ export default {
   },
   methods: {
     toggleAnswer() {
-      this.showAnswer = !this.showAnswer;
+      this.showAnswer = true;
     },
   },
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.disabled {
+  @apply opacity-50;
+}
+</style>
