@@ -1,6 +1,6 @@
 <template>
-  <div class="container flex-col mx-auto bg-red-200 text-gray-900">
-    <div class="bg-yellow-200 w-full flex justify-center mb-4">
+  <div class="container flex-col mx-auto text-gray-900">
+    <div class="w-full flex justify-center mt-2 mb-8">
       <div class="flex justify-evenly w-3/4 mx-auto">
         <router-link to="/ela">
           <button
@@ -19,50 +19,60 @@
         ></router-link>
       </div>
     </div>
-    <div class="w-full bg-indigo-200 p-2">
-      <h1 class="text-5xl">Line Segments and Angles</h1>
+    <div class="w-full p-2 mb-4">
+      <h1 class="text-5xl lg:text-6xl">Line Segments and Angles</h1>
       <h3 class="text-2xl mt-2">
         What are the proper tools needed to create and measure line segments and
         angles?
       </h3>
     </div>
-    <div class="flex w-full justify-center bg-yellow-200 p-4">
-      <div class="bg-green-200 w-full lg:w-2/3 p-2">
-        <p class="text-2xl">
+    <div class="flex w-full justify-center p-4">
+      <div class="w-full lg:w-2/3 p-4 bg-gray-100 shadow-lg rounded-lg">
+        <p class="text-2xl p-2">
           Two of the geometric figures that architectural engineers draw when
           making their blueprints are line segments and angles. These geometric
           figures are the foundation of the major shapes. It's necessary to
           measure and create line segments and angles for all sorts of reasons.
         </p>
         <p class="text-xl mt-4 p-2">
-          <span class="text-2xl italic mr-2">Directions:</span>Study each tab to
-          learn about the tools used in this process.
+          <span class="text-2xl italic mr-2 mark">Directions:</span>Study each
+          tab to learn about the tools used in this process.
         </p>
       </div>
     </div>
-    <div class="bg-indigo-200 p-4">
-      <div class="flex flex-col p-2 bg-purple-200">
+    <div class="p-4">
+      <div class="flex flex-col p-2">
         <div class="flex">
           <div
-            class="bg-green-200 p-4 cursor-pointer"
+            class="rounded-t-lg shadow-sm p-4 cursor-pointer border border-solid border-black border-opacity-10"
             @click="
               selectedTab = 'line';
-              incrementTabClick();
+              setActiveEl(0);
             "
+            :class="{
+              active: selectedTab === 'line',
+              inactive: selectedTab !== 'line',
+            }"
           >
             Line Segments and Rulers
           </div>
           <div
-            class="bg-red-200 p-4 cursor-pointer"
+            class="rounded-t-lg shadow-sm ml-1 p-4 cursor-pointer border border-solid border-black border-opacity-10"
             @click="
               selectedTab = 'angle';
-              incrementTabClick();
+              setActiveEl(1);
             "
+            :class="{
+              active: selectedTab === 'angle',
+              inactive: selectedTab !== 'angle',
+            }"
           >
             Angles and Protractors
           </div>
         </div>
-        <div class="bg-yellow-200">
+        <div
+          class="bg-gray-100 rounded-r-lg rounded-b-lg shadow-lg border border-solid border-black border-opacity-10"
+        >
           <div v-if="selectedTab === 'line'" class="flex flex-col">
             <div class="flex flex-col xl:flex-row p-4 items-center">
               <div class="text-xl p-4 w-full">
@@ -72,8 +82,8 @@
                   called the <span class="font-bold">distance</span>. To
                   <span class="font-bold">measure</span>
                   something means to determine its size or amount. A
-                  <span class="font-bold">ruler</span> is the most common tool
-                  used to measure distance.
+                  <span class="font-bold mark">ruler</span> is the most common
+                  tool used to measure distance.
                 </p>
                 <p class="my-5">
                   The customary units of measure for length or distance in the
@@ -101,10 +111,11 @@
               </div>
             </div>
             <div class="mx-auto">
-              <p class="mb-6">
-                Here’s a Tip Since most rulers have inches along one edge and
-                centimeters along the other, make sure you are using the correct
-                edge when measuring and drawing line segments.
+              <p class="mb-6 p-2 italic">
+                <span class="font-bold mark">Here’s a Tip:</span>
+                Since most rulers have inches along one edge and centimeters
+                along the other, make sure you are using the correct edge when
+                measuring and drawing line segments.
               </p>
             </div>
           </div>
@@ -125,17 +136,17 @@
               </div>
             </div>
             <div
-              class="bg-yellow-300 flex flex-col justify-center items-center lg:flex-row w-full p-4"
+              class="flex flex-col justify-center items-center lg:flex-row w-full p-4"
             >
               <p class="w-full lg:w-1/2 justify-center items-center">
                 Angles are often measured in units called degrees. The
-                <span class="font-bold">degree</span> of an angle is usually a
-                number from 0 to 360 that tells you how large the angle is. It
-                represents how much "turn" or incline the angle has. Degrees are
-                indicated by writing a number followed by the symbol °. For
-                example, when you see 45°, you read it as 45 degrees. To write
-                that the measure of angle A is 45 degrees, you would write m∠A =
-                45°.
+                <span class="font-bold mark">degree</span> of an angle is
+                usually a number from 0 to 360 that tells you how large the
+                angle is. It represents how much "turn" or incline the angle
+                has. Degrees are indicated by writing a number followed by the
+                symbol °. For example, when you see 45°, you read it as 45
+                degrees. To write that the measure of angle A is 45 degrees, you
+                would write m∠A = 45°.
               </p>
               <div class="w-full lg:w-1/2">
                 <p class="mb-4 mt-2">Here is what a 45° angle looks like:</p>
@@ -147,8 +158,8 @@
               </div>
             </div>
             <div class="p-4">
-              A <span class="font-bold">protractor</span> is a device used to
-              measure the degree of an angle. You can verify that the angle
+              A <span class="font-bold mark">protractor</span> is a device used
+              to measure the degree of an angle. You can verify that the angle
               above is 45° by laying the protractor on top of the angle, as
               shown below.
             </div>
@@ -168,8 +179,9 @@
               used this inner scale to determine that &ang;BAC measured 45°.
             </p>
             <p class="italic my-4">
-              Important Note Not all protractors have the inner scale and outer
-              scale in the same order as the one in the picture above.
+              <span class="mark">Important Note</span> Not all protractors have
+              the inner scale and outer scale in the same order as the one in
+              the picture above.
             </p>
             <p>
               During this lesson, you will learn how to measure and create
@@ -179,7 +191,7 @@
         </div>
       </div>
     </div>
-    <div class="bg-yellow-200 w-full flex justify-center mb-4">
+    <div class="w-full flex justify-center mb-4 mt-8">
       <div class="flex justify-evenly w-3/4 mx-auto">
         <router-link to="/ela">
           <button
@@ -213,11 +225,6 @@ export default {
       tabsClicked: 0,
     };
   },
-  methods: {
-    incrementTabClick() {
-      this.tabsClicked++;
-    },
-  },
 };
 </script>
 
@@ -225,4 +232,12 @@ export default {
 /* .disabled {
   @apply opacity-50 cursor-not-allowed;
 } */
+
+.active {
+  background-color: rgba(59, 130, 246, 0.35);
+}
+
+.inactive {
+  @apply bg-gray-100;
+}
 </style>

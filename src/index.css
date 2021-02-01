@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald&family=Raleway&display=swap");
 
 h1,
 h2,
 h3 {
-  font-family: "Cardo", serif;
+  font-family: "Raleway", sans-serif;
 }
 
 p,
@@ -24,4 +24,12 @@ button {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+.mark {
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(59, 130, 246, 0.4) 33%
+  );
 }
