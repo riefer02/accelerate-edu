@@ -5,7 +5,7 @@
         <button
           class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none opacity-50"
         >
-          <fa icon="arrow-circle-left" class="mr-2" />Previous Page
+          <fa icon="arrow-circle-left" class="mr-2" />Prev Page
         </button>
         <router-link to="/ela"
           ><button
@@ -24,7 +24,7 @@
     <div class="flex flex-col md:flex-row w-full bg-yellow-200 p-4">
       <div
         alt="Helix Nebula"
-        class="h-40 md:h-auto w-full md:w-1/3 bg-cover bg-center"
+        class="h-60 md:h-auto w-full md:w-1/3 bg-cover bg-center"
         style="
           background-image: url(https://cdn.mos.cms.futurecdn.net/iuQmVPLBRbmRQeoA46VTZ6.jpg);
         "
@@ -81,7 +81,7 @@
         <button
           class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none opacity-50"
         >
-          <fa icon="arrow-circle-left" class="mr-2" />Previous Page
+          <fa icon="arrow-circle-left" class="mr-2" />Prev Page
         </button>
         <router-link to="/ela"
           ><button

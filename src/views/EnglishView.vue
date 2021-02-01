@@ -6,7 +6,7 @@
           <button
             class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none"
           >
-            <fa icon="arrow-circle-left" class="mr-2" />Previous Page
+            <fa icon="arrow-circle-left" class="mr-2" />Prev Page
           </button>
         </router-link>
         <router-link to="/math"
@@ -26,7 +26,7 @@
       </h3>
     </div>
     <div class="flex w-full bg-yellow-200 p-4">
-      <div class="bg-green-200 w-full sm:w-3/4 p-2 mx-auto">
+      <div class="bg-green-200 w-full lg:w-3/4 p-2 mx-auto">
         <p class="text-2xl">
           Is every story completely different from any other? Or do some kinds
           of details appear in many stories, both in writing and on screen? An
@@ -35,7 +35,7 @@
         </p>
       </div>
     </div>
-    <div class="bg-indigo-200 p-4 w-full sm:w-3/4 mx-auto">
+    <div class="bg-indigo-200 p-4 w-full lg:w-3/4 mx-auto">
       <p class="text-2xl p-2">
         The word archetype comes from two Greek words—archein and typos. Archein
         means “first” or “primitive,” and typos means “a model to be followed.”
@@ -83,7 +83,7 @@
           <button
             class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none"
           >
-            <fa icon="arrow-circle-left" class="mr-2" />Previous Page
+            <fa icon="arrow-circle-left" class="mr-2" />Prev Page
           </button>
         </router-link>
         <router-link to="/math"
@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style scoped>
-.disabled {
+/* .disabled {
   @apply opacity-50;
-}
+} */
 </style>

@@ -6,7 +6,7 @@
           <button
             class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none"
           >
-            <fa icon="arrow-circle-left" class="mr-2" />Previous Page
+            <fa icon="arrow-circle-left" class="mr-2" />Prev Page
           </button></router-link
         >
         <router-link to="/"
@@ -27,7 +27,7 @@
       </h3>
     </div>
     <div class="flex w-full justify-center bg-yellow-200 p-4">
-      <div class="bg-green-200 w-full sm:w-2/3 p-2">
+      <div class="bg-green-200 w-full lg:w-2/3 p-2">
         <p class="text-2xl">
           Two of the geometric figures that architectural engineers draw when
           making their blueprints are line segments and angles. These geometric
@@ -64,8 +64,8 @@
         </div>
         <div class="bg-yellow-200">
           <div v-if="selectedTab === 'line'" class="flex flex-col">
-            <div class="flex">
-              <div class="text-xl p-4 w-full sm:w-2/3">
+            <div class="flex flex-col xl:flex-row p-4 items-center">
+              <div class="text-xl p-4 w-full xl:w-2/3">
                 <p class="my-5">
                   Recall that a line segment is a portion of a line that has
                   specific endpoints. The length between these two endpoints is
@@ -179,7 +179,7 @@
           <button
             class="text-xl sm:text-2xl flex justify-center items-center mr-4 focus:outline-none"
           >
-            <fa icon="arrow-circle-left" class="mr-2" />Previous Page
+            <fa icon="arrow-circle-left" class="mr-2" />Prev Page
           </button></router-link
         >
         <router-link to="/"
@@ -216,7 +216,7 @@ export default {
 </script>
 
 <style>
-.disabled {
+/* .disabled {
   @apply opacity-50 cursor-not-allowed;
-}
+} */
 </style>

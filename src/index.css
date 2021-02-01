@@ -2,6 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url("https://fonts.googleapis.com/css2?family=Cardo&family=Oswald&display=swap");
+
+h1,
+h2,
+h3 {
+  font-family: "Cardo", serif;
+}
+
+p,
+div,
+button {
+  font-family: "Oswald", sans-serif;
+}
+
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.5s ease;
