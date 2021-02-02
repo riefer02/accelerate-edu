@@ -53,7 +53,7 @@
       </p>
     </div>
     <div class="flex justify-center w-full">
-      <video class="w-full lg:w-1/2" controls playsinline>
+      <video class="w-full block" controls playsinline>
         <source
           src="../assets/video/ela-lesson-video-accelerate-edu.mp4"
           type="video/mp4"

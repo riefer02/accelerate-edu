@@ -163,7 +163,7 @@
               above is 45° by laying the protractor on top of the angle, as
               shown below.
             </div>
-            <div class="mx-auto flex justify-center">
+            <div class="mx-auto flex justify-center h-auto">
               <img
                 src="../assets/images/image6.jpg"
                 alt="protractor"
