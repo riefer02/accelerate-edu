@@ -54,10 +54,7 @@
           </div>
           <div
             class="rounded-t-lg shadow-sm ml-1 p-4 cursor-pointer border border-solid border-black border-opacity-10"
-            @click="
-              selectedTab = 'angle';
-              setActiveEl(1);
-            "
+            @click="selectedTab = 'angle'"
             :class="{
               active: selectedTab === 'angle',
               inactive: selectedTab !== 'angle',
@@ -166,7 +163,7 @@
                   alt="protractor"
                   class="w-3/4 mx-auto"
                 />
-                <sub
+                <sub class="italic"
                   >Figure VI. A protractor with a fourty five degree angle
                   applied over it.</sub
                 >
@@ -185,7 +182,7 @@
               used this inner scale to determine that &ang;BAC measured 45°.
             </p>
             <p class="italic my-4">
-              <span class="mark">Important Note</span> Not all protractors have
+              <span class="mark">Important Note</span>: Not all protractors have
               the inner scale and outer scale in the same order as the one in
               the picture above.
             </p>
