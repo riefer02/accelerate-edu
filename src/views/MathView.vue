@@ -121,7 +121,7 @@
           </div>
           <div v-else-if="selectedTab === 'angle'" class="text-xl p-4">
             <div class="flex flex-col lg:flex-row p-4 items-center">
-              <p class="w-full lg:w-1/2">
+              <p class="w-full lg:w-1/2 mb-2 lg:mb-0">
                 Recall that an angle is a shape formed by two rays diverging
                 from a common point known as the vertex. These rays are the
                 "sides" of an angle, known as the initial side—also called the
@@ -163,11 +163,11 @@
               above is 45° by laying the protractor on top of the angle, as
               shown below.
             </div>
-            <div class="mx-auto flex justify-center h-auto">
+            <div class="mx-auto flex justify-center mx-h-50 sm:mx-h-auto">
               <img
                 src="../assets/images/image6.jpg"
                 alt="protractor"
-                class="sm:w-3/4 lg:w-1/2 w-full mx-auto"
+                class="sm:w-3/4 lg:w-1/2 w-auto mx-auto"
               />
             </div>
             <p class="mt-4">
@@ -226,7 +226,6 @@ export default {
   data() {
     return {
       selectedTab: "line",
-      tabsClicked: 0,
     };
   },
   methods: {
