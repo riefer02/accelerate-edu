@@ -164,7 +164,11 @@
               shown below.
             </div>
             <div class="mx-auto flex justify-center">
-              <img src="../assets/images/image6.jpg" alt="protractor" />
+              <img
+                src="../assets/images/image6.jpg"
+                alt="protractor"
+                class="sm:w-3/4 lg:w-1/2 w-full mx-auto"
+              />
             </div>
             <p class="mt-4">
               The initial side, or base, of the angle is placed along the
