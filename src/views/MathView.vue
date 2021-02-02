@@ -12,7 +12,6 @@
         <router-link to="/"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
-            :class="{ disabled: tabsClicked === 0 }"
           >
             Next Page
             <fa icon="arrow-circle-right" class="ml-1" /></button
@@ -45,10 +44,7 @@
         <div class="flex">
           <div
             class="rounded-t-lg shadow-sm p-4 cursor-pointer border border-solid border-black border-opacity-10"
-            @click="
-              selectedTab = 'line';
-              setActiveEl(0);
-            "
+            @click="selectedTab = 'line'"
             :class="{
               active: selectedTab === 'line',
               inactive: selectedTab !== 'line',
@@ -213,7 +209,6 @@
         <router-link to="/" @click="scrollToTop()"
           ><button
             class="text-xl sm:text-2xl flex justify-center items-center mr-2"
-            :class="{ disabled: tabsClicked === 0 }"
           >
             Next Page
             <fa icon="arrow-circle-right" class="ml-1" /></button
@@ -243,10 +238,6 @@ export default {
 </script>
 
 <style>
-/* .disabled {
-  @apply opacity-50 cursor-not-allowed;
-} */
-
 .active {
   background-color: rgba(59, 130, 246, 0.35);
 }
