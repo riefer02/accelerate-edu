@@ -162,7 +162,7 @@
                 A <span class="font-bold mark">protractor</span> is a device
                 used to measure the degree of an angle. You can verify that the
                 angle above is 45° by laying the protractor on top of the angle,
-                as shown to the right.
+                as shown in figure VI.
               </div>
               <div class="mx-auto w-full lg:w-1/2">
                 <img
@@ -170,6 +170,10 @@
                   alt="protractor"
                   class="w-3/4 mx-auto"
                 />
+                <sub
+                  >Figure VI. A protractor with a fourty five degree angle
+                  applied over it.</sub
+                >
               </div>
             </div>
             <p class="mt-4">
