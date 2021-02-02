@@ -52,8 +52,8 @@
         video to learn how archetypes can make a story more meaningful.
       </p>
     </div>
-    <div class="flex justify-center w-full">
-      <video class="w-full block" controls playsinline>
+    <div class="w-full overflow-hidden">
+      <video class="w-full block min-w-full max-w-full" controls playsinline>
         <source
           src="../assets/video/ela-lesson-video-accelerate-edu.mp4"
           type="video/mp4"

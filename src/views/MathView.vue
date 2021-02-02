@@ -157,18 +157,20 @@
                 />
               </div>
             </div>
-            <div class="p-4">
-              A <span class="font-bold mark">protractor</span> is a device used
-              to measure the degree of an angle. You can verify that the angle
-              above is 45° by laying the protractor on top of the angle, as
-              shown below.
-            </div>
-            <div class="mx-auto flex justify-center mx-h-50 sm:mx-h-auto">
-              <img
-                src="../assets/images/image6.jpg"
-                alt="protractor"
-                class="sm:w-3/4 lg:w-1/2 w-auto mx-auto"
-              />
+            <div class="flex flex-col lg:flex-row items-center my-6">
+              <div class="p-4 w-full lg:w-1/2">
+                A <span class="font-bold mark">protractor</span> is a device
+                used to measure the degree of an angle. You can verify that the
+                angle above is 45° by laying the protractor on top of the angle,
+                as shown to the right.
+              </div>
+              <div class="mx-auto w-full lg:w-1/2">
+                <img
+                  src="../assets/images/image6.jpg"
+                  alt="protractor"
+                  class="w-3/4 mx-auto"
+                />
+              </div>
             </div>
             <p class="mt-4">
               The initial side, or base, of the angle is placed along the
